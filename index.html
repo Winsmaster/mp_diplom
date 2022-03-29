@@ -6,6 +6,53 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="popup">
+		<div class="popup_form">
+			<div class="popup_container">
+				<div class="feedback">
+					<div class="header_trends">
+						<h2 class="header_trend"><a href="#0" class="header_post_link">Ваш фидбек</a></h2>
+					</div>
+					<form class="feedback">
+						<div class="form_feedback">
+							<label class="select_time">
+								<span class="text_popup">Как часто вы звходите на сайт?</span>
+								<select class="select_group">
+									<option value="moscow" selected>Почти каждый день</option>
+	          						<option value="st-petersburg">Один раз в неделю</option>
+	          						<option value="kazan">Один раз в месяц</option>
+								</select>
+							</label>
+						</div>
+						<div class="form_feedback">
+							<span class="text_popup">Вы подписаны на email рассылку?</span>
+							<div class="form_radio">
+								<label class="radio_group">
+									<input type="radio" class="radio" name="radio-group" checked>
+									<span class="radio_group_text">Да</span>
+								</label>
+								<label class="radio_group">
+									<input type="radio" class="radio" name="radio-group">
+									<span class="radio_group_text">Нет</span>
+								</label>
+							</div>						
+						</div>
+						<div class="form_feedback">
+							<label class="form_textarea">
+								<span class="text_popup">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
+								<textarea class="field_textarea" placeholder="Может, больше рецептов?" ></textarea>
+							</label>
+						</div>
+						<div class="form_btn">
+							<button class="form_popup_btn">Отправить<span class="social_link_text">Отправить</span></button>
+						</div>
+						<button class="popup_close"></button>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
 	<header class="header_page">
 		<div class="header_page_topmenu">
 			<a href="#0"><img src="svg/noemi-logo.svg" class="logo" alt=""></a>
@@ -63,8 +110,7 @@
 					<h2 class="header_trend_content"><a href="#0" class="header_trend_link">Сейчас в тренде: сколько витамина c в лимонах?</a></h2>
 				</div>
 			</div>
-		</div>
-	
+		</div>	
 	</div>
 <div class="content">
 	<main class="post_list">
@@ -293,8 +339,8 @@
 			<article class="product">
 				<picture class="product_picture">
 			      	<source media="(min-width: 1200px)" srcset="images/shop-item-desk3.jpg" width="100%">
-			        <source media="(min-width: 768px)" srcset="images/shop-item-tablet3.jpg"width="100%">
-			        <source media="(max-width: 767px)" srcset="images/shop-item-mobile3.jpg"width="100%">
+			        <source media="(min-width: 768px)" srcset="images/shop-item-tablet3.jpg" width="100%">
+			        <source media="(max-width: 767px)" srcset="images/shop-item-mobile3.jpg" width="100%">
 					<img class="product_img" src="images/shop-item-desk2.jpg" alt="Шестиугольная рамка">
 				</picture>
 					<div class="product_content">
@@ -309,7 +355,7 @@
 						</div>
 					</div>
 			</article>
-			</div>
+		</div>
 	</div>
 </div>
 <footer class="footer">

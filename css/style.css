@@ -1,4 +1,4 @@
-* {
+*{
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
@@ -759,8 +759,208 @@
 	text-decoration: none;
 }
 
+.popup {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	position: fixed;
+	background-color: rgba(17, 17, 17, 0.7);
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup_form {
+	width: 390px;
+	height: 100vh;
+	position: relative;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px;
+}
+
+.popup_container {
+	width: 390px;
+	height: 590px;
+	background-color: #ffffff;
+	margin: auto;
+	z-index: 3;
+	padding: 30px;
+	padding-top: 50px;
+	position: absolute;
+}
+
+.form_feedback {
+	width: 100%;
+	font-family: open_sans;
+	font-size: 13px;
+	padding-top: 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.text_popup{
+	font-family: open_sans;
+	font-size: 13px;
+	line-height: 16px;
+	padding-right: 10px;
+}
+
+.select_group {
+	width: 100%;
+	height: 48px;
+	margin-top: 10px;
+	padding-left: 20px;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #767877;
+	border: none;
+	background-color: #f4f7f6;
+	-webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url(../svg/form-arrows.svg);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px;
+}
+
+.select_group:focus {
+	outline: none;
+  border: 2px solid #b59f5b;
+}
+
+.form_radio {
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+}
+
+.radio_group {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.radio {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+}
+
+.radio_group_text {
+	display: flex;
+	align-items: center;
+	margin-right: 15px;
+	
+}
+
+.radio_group_text:before {
+	content: "";
+	margin-right: 5px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-image: url(../svg/form-empty-circle.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px;
+}
+
+.radio:checked ~ .radio_group_text:before {
+	background-image: url(../svg/form-circle.svg);
+}
+
+.form_textarea {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.field_textarea {
+	width: 100%;
+	margin-top: 10px;
+	border: none;
+	font-family: open_sans;
+	font-size: 13px;
+	padding-top: 15px;
+	padding-left: 20px;
+	min-height: 130px;
+	outline: none;
+	resize: none;
+	background-color: #f4f7f6;
+}
+
+.field_textarea:hover {
+	border: 2px solid #b59f5b;
+}
+
+.form_btn {
+	padding-top: 25px;
+}
+
+.form_popup_btn {
+	width: 100%;
+	height: 48px;
+	display: inline-block;
+	align-items: center;
+	font-size: 14px;
+	color: #ffffff;
+	text-transform: uppercase;
+	border: none;
+	background-color: #b59f5b; 
+}
+
+.form_popup_btn:hover {
+	background-color: #323232;
+}
+
+.popup_close {
+	position: absolute;
+	top: -25px;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	border: none;
+  padding: 0;
+  text-indent: -99px;
+	background-color: transparent;
+	background-image: url(../svg/form-x.svg);
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
-  .top_menu {
+  
+.popup_close {
+		width: 25px;
+		height: 25px;
+		top: -35px;
+}
+
+.form_feedback {
+  	padding-top: 25px;
+}
+
+.form_feedback:nth-child(n+2) {
+  	padding-top: 30px;
+}
+
+.select_group {
+  	margin-top: 5px;
+}
+
+.radio_group_text:before {
+  	width: 25px;
+  	height: 25px;
+  	background-size: 25px;
+}
+
+.radio_group_text {
+  	margin-right: 35px;
+}
+
+.top_menu {
    visibility: hidden;
    display: none;
 }
@@ -948,6 +1148,40 @@
 
 @media (max-width: 767px) {
 
+.popup_close {
+		width: 25px;
+		height: 25px;
+		top: -35px;
+}
+
+.popup_form {
+	padding-top: 25px;
+}
+
+.popup_container{
+	max-width: 330px;
+	max-height: 550px;
+	padding-top: 25px;
+}
+
+.form_feedback {
+	padding-top: 30px;
+}
+
+.select_group {
+	margin-bottom: -5px;
+}
+
+.radio_group_text:before {
+  	width: 25px;
+  	height: 25px;
+  	background-size: 25px;
+}
+
+.radio_group_text {
+  	margin-right: 35px;
+}
+
 .top_menu {
   visibility: hidden;
   display: none;
@@ -969,7 +1203,6 @@
 .header_page_topmenu {
 	max-width: 768px;
 	padding: 0;
-	
 }
 
 .header_page {
@@ -979,8 +1212,6 @@
   height: 100vh;
   padding-top: calc(10/360*100%);
   padding-right: calc(15/360*100%);
-
-  
 }
 
 .intro {
