@@ -335,7 +335,7 @@
 }
 
 .data_author {
-	margin-top: 18px;
+	margin-top: 25px;
 	margin-bottom: 33px;
 }
 
@@ -774,21 +774,21 @@
 	width: 390px;
 	height: 100vh;
 	position: relative;
-	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-top: 40px;
+	padding-top: 70px;
 }
 
 .popup_container {
 	width: 390px;
-	height: 590px;
+	max-height: 590px;
 	background-color: #ffffff;
 	margin: auto;
 	z-index: 3;
 	padding: 30px;
 	padding-top: 50px;
+	padding-bottom: 60px;
 	position: absolute;
 }
 
@@ -930,12 +930,16 @@
 	background-image: url(../svg/form-x.svg);
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 641px) and (max-width: 1199px) {
   
 .popup_close {
 		width: 25px;
 		height: 25px;
 		top: -35px;
+}
+
+.popup_container {
+	padding-top: 45px;
 }
 
 .form_feedback {
@@ -1078,17 +1082,12 @@
     margin-top: 65px;
 }
 
-.post_picture {
-	max-height: 300px;
-}
-
 .img_post {
-	max-height: 300px;
 	object-fit: cover;
 }
 
 .post_content {
-	padding-top: 20px;
+	padding-top: 5px;
 	width: 100%;
 }
 
@@ -1108,6 +1107,7 @@
 
 .products_blog {
 	padding-top: 55px;
+	padding-bottom: 65px;
 }
 
 .products {
@@ -1125,16 +1125,24 @@
 	width: 38vw;
 	max-width: 38vw;
 }
+
+.footer_list{
+	width: calc(100% - 70px);
 }
 
-@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+.copyright {
+	padding-top: 40px;
+}
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
 
 .trend_preview {
 	flex-wrap: nowrap;
 }
 
 .trend {
-	max-width: 25%;
+	max-width: calc(25% - 3px);
 }
 
 .trend:nth-child(n) {
@@ -1146,7 +1154,7 @@
 } 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 640px) {
 
 .popup_close {
 		width: 25px;
@@ -1159,13 +1167,15 @@
 }
 
 .popup_container{
-	max-width: 330px;
-	max-height: 550px;
+	max-width: 92vw;
+	min-width: 290px;
+	max-height:85vh;
+	height: 550px;
 	padding-top: 25px;
 }
 
 .form_feedback {
-	padding-top: 30px;
+	padding-top: calc(30/640*100vh);
 }
 
 .select_group {
@@ -1182,6 +1192,13 @@
   	margin-right: 35px;
 }
 
+.field_textarea {
+	min-height: 0;
+	height: calc(130/640*100vh);
+	max-height: 130px;
+}
+
+
 .top_menu {
   visibility: hidden;
   display: none;
@@ -1197,8 +1214,7 @@
   width: calc(268/360*100vw);
   top: 33vh;
   left: 16%;
-  
-}
+ }
 
 .header_page_topmenu {
 	max-width: 768px;
@@ -1207,7 +1223,7 @@
 
 .header_page {
   max-width: 768px;
-  min-width: 360px;
+  min-width: 320px;
   background-image: url("../images/banner-mobile.jpg");
   height: 100vh;
   padding-top: calc(10/360*100%);
@@ -1227,7 +1243,7 @@
 
 .trends {
   max-width: 768px;
-  min-width: 360px;
+  min-width: 320px;
   padding-top: 40px;
 }
 
@@ -1297,11 +1313,10 @@
 }
 
 .post:nth-child(n+2) {
-    margin-top: 60px;
+   margin-top: 60px;
 }
 
 .img_post {
-	max-height: 300px;
 	object-fit: cover;
 }
 
@@ -1464,7 +1479,7 @@
 }
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 640px) and (orientation: landscape) {
 
 .trend {
 	max-width: calc(50% - 2px);
