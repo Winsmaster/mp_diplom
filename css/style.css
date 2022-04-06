@@ -761,7 +761,7 @@
 
 .popup {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	position: fixed;
 	background-color: rgba(17, 17, 17, 0.7);
@@ -931,7 +931,7 @@
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-  
+
 .popup_close {
 		width: 25px;
 		height: 25px;
@@ -987,7 +987,7 @@
 
 .header_page {
   max-width: 1200px;
-  min-width: 768px;
+  min-width: 640px;
   background-image: url("../images/banner-bg-tablet.jpg");
   padding-top: 45px;
   max-height: 390px;
@@ -1006,7 +1006,7 @@
 
 .trends {
   max-width: 1200px;
-  min-width: 768px;
+  min-width: 640px;
   padding-top: 45px;
 }
 
@@ -1044,11 +1044,11 @@
 }
 
 .trend:nth-child(n) {
-		margin-left: 0px;
+	margin-left: 0px;
 } 
 
 .trend:nth-child(n+3) {
-		margin-top: 3px;
+	margin-top: 3px;
 }
 
 .trend:nth-child(2n+1) {
@@ -1170,8 +1170,8 @@
 	max-width: 92vw;
 	min-width: 290px;
 	max-height:85vh;
-	height: 550px;
 	padding-top: 25px;
+	overflow: scroll;
 }
 
 .form_feedback {
